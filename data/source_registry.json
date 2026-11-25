@@ -1,0 +1,51 @@
+
+{
+  "registry_name": "EcoGuard AI Official Environmental Sources",
+  "country": "India",
+  "coverage_status": "PARTIAL - State-wise sources not yet integrated",
+  "sources": [
+    {
+      "source_id": "CPCB_RULES",
+      "authority": "Central Pollution Control Board",
+      "scope": "National",
+      "category": "Environmental Acts and Rules",
+      "url": "https://cpcb.gov.in/web/rules/",
+      "source_type": "Official government portal",
+      "ingestion_status": "NOT_INGESTED"
+    },
+    {
+      "source_id": "MOEFCC",
+      "authority": "Ministry of Environment, Forest and Climate Change",
+      "scope": "National",
+      "category": "Environmental policies and notifications",
+      "url": "https://moef.gov.in/",
+      "source_type": "Official government portal",
+      "ingestion_status": "NOT_INGESTED"
+    },
+    {
+      "source_id": "INDIA_CODE",
+      "authority": "Government of India",
+      "scope": "National",
+      "category": "Central Acts and legislation",
+      "url": "https://www.indiacode.nic.in/",
+      "source_type": "Official legislation repository",
+      "ingestion_status": "NOT_INGESTED"
+    },
+    {
+      "source_id": "PARIVESH",
+      "authority": "Ministry of Environment, Forest and Climate Change",
+      "scope": "National and State-level environmental clearances",
+      "category": "Environmental clearance information",
+      "url": "https://cpc.parivesh.nic.in/",
+      "source_type": "Official government portal",
+      "ingestion_status": "NOT_INGESTED"
+    }
+  ],
+  "important_rules": [
+    "Use official sources wherever possible.",
+    "Record the source and retrieval date for every retrieved regulation.",
+    "Check amendment and effective dates before using a regulation.",
+    "Do not treat an unverified source as current law.",
+    "Do not claim complete coverage of all Indian states and union territories."
+  ]
+}

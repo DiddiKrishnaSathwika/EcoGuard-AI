@@ -1,0 +1,6 @@
+# Only needed if you set USE_VECTOR_DB=true in .env
+chromadb
+langchain-chroma
+langchain-community
+# Only needed for optional Google Gemini embeddings used by ChromaDB.
+langchain-google-genai>=2.0

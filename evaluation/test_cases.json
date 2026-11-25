@@ -1,0 +1,222 @@
+{
+  "suite": "EcoGuard AI assessment pipeline checks",
+  "assessment_date": "2026-11-24",
+  "note": "Synthetic cases written with the project. They verify that the assessment logic behaves as specified (evidence rules, no fabricated compliance); they do not measure real-world legal accuracy.",
+  "cases": [
+    {
+      "id": "missing_documents_not_a_violation",
+      "description": "Items listed as 'Not provided' must be insufficient evidence, never non-compliant.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "Yes",
+        "air_emissions": "Yes",
+        "hazardous_waste": "No"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nConsent to Establish: Not provided\nConsent to Operate: Not provided"
+        }
+      ],
+      "expected": {
+        "WATER_S25_CTO": "INSUFFICIENT_EVIDENCE",
+        "WATER_S25_CTE": "INSUFFICIENT_EVIDENCE",
+        "AIR_S21_CTO": "INSUFFICIENT_EVIDENCE",
+        "HWM_R6_AUTHORISATION": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "id": "valid_cto_is_compliant",
+      "description": "Water CTO with reference number and a future validity date.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "Yes",
+        "air_emissions": "No",
+        "hazardous_waste": "No"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nConsent to Operate: Granted vide Order No. TS/CTO/2025/4411, valid up to 31/03/2027"
+        }
+      ],
+      "expected": {
+        "WATER_S25_CTO": "COMPLIANT",
+        "AIR_S21_CTO": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "id": "expired_cto_is_non_compliant",
+      "description": "CTO validity date earlier than assessment date.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "Yes",
+        "air_emissions": "No",
+        "hazardous_waste": "No"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nConsent to Operate: Order No. TS/CTO/2022/918 valid up to 31/03/2025"
+        }
+      ],
+      "expected": {
+        "WATER_S25_CTO": "NON_COMPLIANT"
+      }
+    },
+    {
+      "id": "cto_without_validity_is_partial",
+      "description": "CTO is present with a number but no validity date.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "Yes",
+        "air_emissions": "No",
+        "hazardous_waste": "No"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nConsent to Operate granted, Order No. TS/CTO/2024/771"
+        }
+      ],
+      "expected": {
+        "WATER_S25_CTO": "PARTIALLY_COMPLIANT"
+      }
+    },
+    {
+      "id": "explicit_absence_is_non_compliant",
+      "description": "Document explicitly says consent has not been obtained.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "Yes",
+        "air_emissions": "No",
+        "hazardous_waste": "No"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nConsent to Operate: not obtained"
+        }
+      ],
+      "expected": {
+        "WATER_S25_CTO": "NON_COMPLIANT"
+      }
+    },
+    {
+      "id": "air_gap_is_conditional_not_violation",
+      "description": "Explicit air consent gap must not be asserted as non-compliance because applicability is conditional.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "No",
+        "air_emissions": "Yes",
+        "hazardous_waste": "No"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nConsent to Operate: not obtained"
+        }
+      ],
+      "expected": {
+        "AIR_S21_CTO": "INSUFFICIENT_EVIDENCE",
+        "WATER_S25_CTO": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "id": "no_documents",
+      "description": "No documents at all: nothing may be reported compliant.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "Yes",
+        "air_emissions": "Yes",
+        "hazardous_waste": "No"
+      },
+      "documents": [],
+      "expected": {
+        "WATER_S25_CTO": "INSUFFICIENT_EVIDENCE",
+        "AIR_S21_CTO": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "id": "hazardous_waste_fully_evidenced",
+      "description": "Hazardous waste authorisation, Form 3, Form 4 and manifests are evidenced.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "No",
+        "air_emissions": "No",
+        "hazardous_waste": "Yes"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nHazardous waste authorisation No. HW/2025/118 valid till 30 June 2028\nForm 3 hazardous waste record maintained, register no. R-22\nDate: 15/10/2026\nWaste type: used oil\nQuantity: 25 kg\nAnnual return Form 4 filed on 28/06/2026, acknowledgement received\nReporting Period: FY 2025-26\nAcknowledgement No: ACK/2026/123\nManifest Form 10 copies filed\nManifest No: M-5501\nDate: 15/10/2026\nSender: Test Co\nReceiver: Authorized Facility\nWaste type: used oil\nQuantity: 25 kg"
+        }
+      ],
+      "expected": {
+        "HWM_R6_AUTHORISATION": "COMPLIANT",
+        "HWM_R6_RECORDS": "COMPLIANT",
+        "HWM_R6_ANNUAL_RETURN": "COMPLIANT",
+        "HWM_R19_MANIFEST": "COMPLIANT",
+        "WATER_S25_CTO": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "id": "unknown_declaration_needs_information",
+      "description": "'Unknown' hazardous waste declaration with no document signal.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "No",
+        "air_emissions": "No",
+        "hazardous_waste": "Unknown"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nPlant overview only."
+        }
+      ],
+      "expected": {
+        "HWM_R6_AUTHORISATION": "NEEDS_INFORMATION"
+      }
+    },
+    {
+      "id": "declared_no_wastewater_but_documents_report_it",
+      "description": "Profile says No wastewater but the document reports generation.",
+      "profile": {
+        "company": "Test Co",
+        "industry": "Food Processing",
+        "state": "Telangana",
+        "wastewater": "No",
+        "air_emissions": "No",
+        "hazardous_waste": "No"
+      },
+      "documents": [
+        {
+          "filename": "doc.pdf",
+          "text": "--- Page 1 ---\nWastewater generated: 500 litres per day\nConsent to Operate: Not provided"
+        }
+      ],
+      "expected": {
+        "WATER_S25_CTO": "INSUFFICIENT_EVIDENCE"
+      }
+    }
+  ]
+}

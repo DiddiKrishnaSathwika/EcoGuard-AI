@@ -1,0 +1,392 @@
+{
+  "kb_name": "EcoGuard AI Curated Regulatory Knowledge Base",
+  "jurisdiction": "India - national statutes and rules only",
+  "curated_on": "2026-11-24",
+  "status": "CURATED_SUMMARIES_REQUIRE_VERIFICATION",
+  "disclaimer": "Summaries are paraphrased aids, not legal text. Always confirm against the official text and with your State Pollution Control Board. Amendment status has not been independently checked.",
+  "coverage_limitations": [
+    "State-specific rules, standards and consent categories are NOT included.",
+    "Industry-specific effluent and emission standards are NOT included.",
+    "Diesel generator emission and noise norms are NOT included.",
+    "Solid Waste, Plastic Waste, E-waste and Battery rules (including EPR) are NOT included.",
+    "Environmental Clearance (EIA Notification) is NOT included.",
+    "Penalty and enforcement provisions are NOT summarised.",
+    "Only the provisions listed below are assessed; a clean result does not mean full legal compliance."
+  ],
+  "entries": [
+    {
+      "id": "WATER_S25_CTE",
+      "title": "Consent to Establish - discharge of sewage / trade effluent",
+      "instrument": "Water (Prevention and Control of Pollution) Act, 1974",
+      "citation": "Section 25",
+      "jurisdiction": "National (India)",
+      "enforcing_authority": "State Pollution Control Board / Pollution Control Committee of the state or UT",
+      "summary": "Without the previous consent of the State Board, a person may not establish or take steps to establish an industry, operation or process, or a treatment and disposal system, likely to discharge sewage or trade effluent into a stream, well, sewer or on land, nor bring into use a new or altered outlet or begin a new discharge. The Board may grant consent with conditions.",
+      "applies_when": {
+        "profile_field": "wastewater",
+        "value": "yes"
+      },
+      "location_condition": false,
+      "conditions_to_confirm": [
+        "Confirm that your effluent or sewage discharge falls under Section 25 (the Central Government may exempt categories by notification).",
+        "Confirm the consent category and conditions with your State Board."
+      ],
+      "evidence_topic": "consent_to_establish",
+      "evidence_description": "Consent to Establish (CTE) order from the State Board, with reference number and date.",
+      "criticality": "medium",
+      "corrective_action": "Locate the Consent to Establish order issued by your State Pollution Control Board. If none exists, contact the Board about regularisation.",
+      "sources": [
+        {
+          "label": "Water (Prevention and Control of Pollution) Act, 1974 - official text (India Code)",
+          "url": "https://indiacode.nic.in/bitstream/123456789/15429/1/the_water_(prevention_and_control_of_pollution)_act,_1974.pdf",
+          "kind": "official_primary"
+        },
+        {
+          "label": "Tamil Nadu PCB - Water Act salient features",
+          "url": "https://tnpcb.gov.in/wateract.php",
+          "kind": "official_secondary"
+        }
+      ],
+      "verification": {
+        "status": "SECTION_AND_SUBJECT_CONFIRMED_NOT_FULL_TEXT_REVIEWED",
+        "verified_on": "2026-11-24",
+        "method": "Existence, section/rule number and subject matter cross-checked via web search against the listed sources. The summary is a paraphrase written for this tool and has NOT been reviewed by a lawyer."
+      },
+      "keywords": [
+        "consent to establish",
+        "wastewater"
+      ]
+    },
+    {
+      "id": "WATER_S25_CTO",
+      "title": "Consent to Operate - discharge of sewage / trade effluent",
+      "instrument": "Water (Prevention and Control of Pollution) Act, 1974",
+      "citation": "Section 25",
+      "jurisdiction": "National (India)",
+      "enforcing_authority": "State Pollution Control Board / Pollution Control Committee of the state or UT",
+      "summary": "The consent requirement of Section 25 applies to operating the process and making discharges as well as to establishment. State Boards issue a Consent to Operate (CTO) under this Section, normally for a limited validity period that must be renewed.",
+      "applies_when": {
+        "profile_field": "wastewater",
+        "value": "yes"
+      },
+      "location_condition": false,
+      "conditions_to_confirm": [
+        "Confirm that your effluent or sewage discharge falls under Section 25 (the Central Government may exempt categories by notification).",
+        "Confirm the consent category and conditions with your State Board."
+      ],
+      "evidence_topic": "consent_to_operate",
+      "evidence_description": "Current Consent to Operate (CTO) order with reference number and validity dates.",
+      "criticality": "high",
+      "corrective_action": "Obtain or renew the Consent to Operate from your State Pollution Control Board and keep a copy on site. Track its expiry date.",
+      "sources": [
+        {
+          "label": "Water (Prevention and Control of Pollution) Act, 1974 - official text (India Code)",
+          "url": "https://indiacode.nic.in/bitstream/123456789/15429/1/the_water_(prevention_and_control_of_pollution)_act,_1974.pdf",
+          "kind": "official_primary"
+        },
+        {
+          "label": "Tamil Nadu PCB - Water Act salient features",
+          "url": "https://tnpcb.gov.in/wateract.php",
+          "kind": "official_secondary"
+        }
+      ],
+      "verification": {
+        "status": "SECTION_AND_SUBJECT_CONFIRMED_NOT_FULL_TEXT_REVIEWED",
+        "verified_on": "2026-11-24",
+        "method": "Existence, section/rule number and subject matter cross-checked via web search against the listed sources. The summary is a paraphrase written for this tool and has NOT been reviewed by a lawyer."
+      },
+      "keywords": [
+        "consent to operate",
+        "wastewater"
+      ]
+    },
+    {
+      "id": "AIR_S21_CTE",
+      "title": "Consent to Establish - industrial plant in an air pollution control area",
+      "instrument": "Air (Prevention and Control of Pollution) Act, 1981",
+      "citation": "Section 21",
+      "jurisdiction": "National (India)",
+      "enforcing_authority": "State Pollution Control Board / Pollution Control Committee of the state or UT",
+      "summary": "No person may establish or operate an industrial plant in an air pollution control area without the previous consent of the State Board. Consent may be granted with conditions.",
+      "applies_when": {
+        "profile_field": "air_emissions",
+        "value": "yes"
+      },
+      "location_condition": true,
+      "conditions_to_confirm": [
+        "Section 21 applies to industrial plants in an air pollution control area declared by the State Government - confirm whether your premises is in one.",
+        "Confirm that your plant is covered (exemptions can be notified for some categories)."
+      ],
+      "evidence_topic": "consent_to_establish",
+      "evidence_description": "Consent to Establish (air) order from the State Board.",
+      "criticality": "medium",
+      "corrective_action": "Locate the Air Act Consent to Establish order. If unsure of coverage, ask your State Board whether your premises is in an air pollution control area.",
+      "sources": [
+        {
+          "label": "Air (Prevention and Control of Pollution) Act, 1981 - India Code (search for the Act here)",
+          "url": "https://www.indiacode.nic.in/",
+          "kind": "official_primary"
+        },
+        {
+          "label": "Tamil Nadu PCB - Air Act salient features",
+          "url": "https://tnpcb.gov.in/airact.php",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "UNEP LEAP - Air Act text",
+          "url": "https://leap.unep.org/en/akn/in/act/1981/14/eng%402023-08-11",
+          "kind": "secondary_reference"
+        }
+      ],
+      "verification": {
+        "status": "SECTION_AND_SUBJECT_CONFIRMED_NOT_FULL_TEXT_REVIEWED",
+        "verified_on": "2026-11-24",
+        "method": "Existence, section/rule number and subject matter cross-checked via web search against the listed sources. The summary is a paraphrase written for this tool and has NOT been reviewed by a lawyer."
+      },
+      "keywords": [
+        "consent to establish",
+        "air emissions"
+      ]
+    },
+    {
+      "id": "AIR_S21_CTO",
+      "title": "Consent to Operate - industrial plant in an air pollution control area",
+      "instrument": "Air (Prevention and Control of Pollution) Act, 1981",
+      "citation": "Section 21",
+      "jurisdiction": "National (India)",
+      "enforcing_authority": "State Pollution Control Board / Pollution Control Committee of the state or UT",
+      "summary": "The Section 21 prohibition covers operating an industrial plant in an air pollution control area without the State Board's previous consent. Consent orders carry conditions and a validity period.",
+      "applies_when": {
+        "profile_field": "air_emissions",
+        "value": "yes"
+      },
+      "location_condition": true,
+      "conditions_to_confirm": [
+        "Section 21 applies to industrial plants in an air pollution control area declared by the State Government - confirm whether your premises is in one.",
+        "Confirm that your plant is covered (exemptions can be notified for some categories)."
+      ],
+      "evidence_topic": "consent_to_operate",
+      "evidence_description": "Current Consent to Operate (air) order with reference number and validity dates. State Boards often issue a combined Water and Air CTO.",
+      "criticality": "high",
+      "corrective_action": "Obtain or renew the Consent to Operate covering air emissions and keep it on site. Track its expiry date.",
+      "sources": [
+        {
+          "label": "Air (Prevention and Control of Pollution) Act, 1981 - India Code (search for the Act here)",
+          "url": "https://www.indiacode.nic.in/",
+          "kind": "official_primary"
+        },
+        {
+          "label": "Tamil Nadu PCB - Air Act salient features",
+          "url": "https://tnpcb.gov.in/airact.php",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "UNEP LEAP - Air Act text",
+          "url": "https://leap.unep.org/en/akn/in/act/1981/14/eng%402023-08-11",
+          "kind": "secondary_reference"
+        }
+      ],
+      "verification": {
+        "status": "SECTION_AND_SUBJECT_CONFIRMED_NOT_FULL_TEXT_REVIEWED",
+        "verified_on": "2026-11-24",
+        "method": "Existence, section/rule number and subject matter cross-checked via web search against the listed sources. The summary is a paraphrase written for this tool and has NOT been reviewed by a lawyer."
+      },
+      "keywords": [
+        "consent to operate",
+        "air emissions"
+      ]
+    },
+    {
+      "id": "HWM_R6_AUTHORISATION",
+      "title": "Authorisation for managing hazardous and other wastes",
+      "instrument": "Hazardous and Other Wastes (Management and Transboundary Movement) Rules, 2016",
+      "citation": "Rule 6 (Form 2)",
+      "jurisdiction": "National (India)",
+      "enforcing_authority": "State Pollution Control Board / Pollution Control Committee of the state or UT",
+      "summary": "Occupiers who generate or handle hazardous and other wastes must obtain authorisation from the State Pollution Control Board (granted in Form 2) and apply for renewal before it expires.",
+      "applies_when": {
+        "profile_field": "hazardous_waste",
+        "value": "yes"
+      },
+      "location_condition": false,
+      "conditions_to_confirm": [
+        "The Rules apply to wastes specified in their Schedules - confirm that your waste is listed.",
+        "Confirm the authorisation category with your State Board."
+      ],
+      "evidence_topic": "hazardous_waste_authorisation",
+      "evidence_description": "Hazardous waste authorisation (Form 2) with number and validity.",
+      "criticality": "high",
+      "corrective_action": "Obtain or renew the hazardous waste authorisation from your State Pollution Control Board before generating or storing hazardous waste.",
+      "sources": [
+        {
+          "label": "Tamil Nadu PCB - Hazardous Waste Rules salient features",
+          "url": "https://tnpcb.gov.in/hazardous-waste-rules.php",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "Punjab PCB - HWM Rules 2016 list of Forms and rules",
+          "url": "https://ppcb.punjab.gov.in/node/5578",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "India Code / MoEFCC (G.S.R. 395(E), 4 April 2016) - obtain the official text here",
+          "url": "https://www.indiacode.nic.in/",
+          "kind": "official_primary"
+        }
+      ],
+      "verification": {
+        "status": "SECTION_AND_SUBJECT_CONFIRMED_NOT_FULL_TEXT_REVIEWED",
+        "verified_on": "2026-11-24",
+        "method": "Existence, section/rule number and subject matter cross-checked via web search against the listed sources. The summary is a paraphrase written for this tool and has NOT been reviewed by a lawyer."
+      },
+      "keywords": [
+        "hazardous waste authorisation",
+        "hazardous waste"
+      ]
+    },
+    {
+      "id": "HWM_R6_RECORDS",
+      "title": "Record of hazardous waste managed (Form 3)",
+      "instrument": "Hazardous and Other Wastes (Management and Transboundary Movement) Rules, 2016",
+      "citation": "Rule 6 (Form 3)",
+      "jurisdiction": "National (India)",
+      "enforcing_authority": "State Pollution Control Board / Pollution Control Committee of the state or UT",
+      "summary": "Authorised occupiers must maintain a record of the hazardous and other wastes they manage in Form 3.",
+      "applies_when": {
+        "profile_field": "hazardous_waste",
+        "value": "yes"
+      },
+      "location_condition": false,
+      "conditions_to_confirm": [
+        "The Rules apply to wastes specified in their Schedules - confirm that your waste is listed.",
+        "Confirm the authorisation category with your State Board."
+      ],
+      "evidence_topic": "hazardous_waste_records",
+      "evidence_description": "Hazardous waste record register (Form 3) or equivalent waste log.",
+      "criticality": "medium",
+      "corrective_action": "Start or update a Form 3 hazardous waste record and keep it available for inspection.",
+      "sources": [
+        {
+          "label": "Tamil Nadu PCB - Hazardous Waste Rules salient features",
+          "url": "https://tnpcb.gov.in/hazardous-waste-rules.php",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "Punjab PCB - HWM Rules 2016 list of Forms and rules",
+          "url": "https://ppcb.punjab.gov.in/node/5578",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "India Code / MoEFCC (G.S.R. 395(E), 4 April 2016) - obtain the official text here",
+          "url": "https://www.indiacode.nic.in/",
+          "kind": "official_primary"
+        }
+      ],
+      "verification": {
+        "status": "SECTION_AND_SUBJECT_CONFIRMED_NOT_FULL_TEXT_REVIEWED",
+        "verified_on": "2026-11-24",
+        "method": "Existence, section/rule number and subject matter cross-checked via web search against the listed sources. The summary is a paraphrase written for this tool and has NOT been reviewed by a lawyer."
+      },
+      "keywords": [
+        "hazardous waste records",
+        "hazardous waste"
+      ]
+    },
+    {
+      "id": "HWM_R6_ANNUAL_RETURN",
+      "title": "Annual return to the State Board (Form 4)",
+      "instrument": "Hazardous and Other Wastes (Management and Transboundary Movement) Rules, 2016",
+      "citation": "Rule 6 (Form 4)",
+      "jurisdiction": "National (India)",
+      "enforcing_authority": "State Pollution Control Board / Pollution Control Committee of the state or UT",
+      "summary": "Authorised occupiers must submit an annual return in Form 4 to the State Pollution Control Board. Authorisation conditions commonly set 30 June after the financial year as the due date; confirm yours.",
+      "applies_when": {
+        "profile_field": "hazardous_waste",
+        "value": "yes"
+      },
+      "location_condition": false,
+      "conditions_to_confirm": [
+        "The Rules apply to wastes specified in their Schedules - confirm that your waste is listed.",
+        "Confirm the authorisation category with your State Board."
+      ],
+      "evidence_topic": "annual_return_form4",
+      "evidence_description": "Filed annual return (Form 4) for the latest financial year.",
+      "criticality": "medium",
+      "corrective_action": "File the Form 4 annual return for the latest financial year and keep the acknowledgement.",
+      "sources": [
+        {
+          "label": "Tamil Nadu PCB - Hazardous Waste Rules salient features",
+          "url": "https://tnpcb.gov.in/hazardous-waste-rules.php",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "Punjab PCB - HWM Rules 2016 list of Forms and rules",
+          "url": "https://ppcb.punjab.gov.in/node/5578",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "India Code / MoEFCC (G.S.R. 395(E), 4 April 2016) - obtain the official text here",
+          "url": "https://www.indiacode.nic.in/",
+          "kind": "official_primary"
+        }
+      ],
+      "verification": {
+        "status": "SECTION_AND_SUBJECT_CONFIRMED_NOT_FULL_TEXT_REVIEWED",
+        "verified_on": "2026-11-24",
+        "method": "Existence, section/rule number and subject matter cross-checked via web search against the listed sources. The summary is a paraphrase written for this tool and has NOT been reviewed by a lawyer."
+      },
+      "keywords": [
+        "annual return form4",
+        "hazardous waste"
+      ]
+    },
+    {
+      "id": "HWM_R19_MANIFEST",
+      "title": "Manifest for transport of hazardous waste (Form 10)",
+      "instrument": "Hazardous and Other Wastes (Management and Transboundary Movement) Rules, 2016",
+      "citation": "Rule 19 (Form 10)",
+      "jurisdiction": "National (India)",
+      "enforcing_authority": "State Pollution Control Board / Pollution Control Committee of the state or UT",
+      "summary": "Hazardous waste sent off-site must be accompanied by a manifest in Form 10.",
+      "applies_when": {
+        "profile_field": "hazardous_waste",
+        "value": "yes"
+      },
+      "location_condition": false,
+      "conditions_to_confirm": [
+        "The Rules apply to wastes specified in their Schedules - confirm that your waste is listed.",
+        "Confirm the authorisation category with your State Board."
+      ],
+      "evidence_topic": "manifest_form10",
+      "evidence_description": "Copies of manifests (Form 10) for hazardous waste sent to authorised facilities.",
+      "criticality": "medium",
+      "corrective_action": "Use Form 10 manifests for every hazardous waste shipment and retain signed copies.",
+      "sources": [
+        {
+          "label": "Tamil Nadu PCB - Hazardous Waste Rules salient features",
+          "url": "https://tnpcb.gov.in/hazardous-waste-rules.php",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "Punjab PCB - HWM Rules 2016 list of Forms and rules",
+          "url": "https://ppcb.punjab.gov.in/node/5578",
+          "kind": "official_secondary"
+        },
+        {
+          "label": "India Code / MoEFCC (G.S.R. 395(E), 4 April 2016) - obtain the official text here",
+          "url": "https://www.indiacode.nic.in/",
+          "kind": "official_primary"
+        }
+      ],
+      "verification": {
+        "status": "SECTION_AND_SUBJECT_CONFIRMED_NOT_FULL_TEXT_REVIEWED",
+        "verified_on": "2026-11-24",
+        "method": "Existence, section/rule number and subject matter cross-checked via web search against the listed sources. The summary is a paraphrase written for this tool and has NOT been reviewed by a lawyer."
+      },
+      "keywords": [
+        "manifest form10",
+        "hazardous waste"
+      ]
+    }
+  ]
+}
